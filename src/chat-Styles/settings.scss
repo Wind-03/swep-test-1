@@ -1,0 +1,192 @@
+.Settings{
+    background-color:#1480EC;
+    height:100vh;
+    overflow-y: scroll;
+}
+.settings-container{
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "logo-container profile-area"
+    "links          profile-area";
+}
+.hamburger{
+    display:none;
+}
+.profile-box{
+    display:none;
+}
+.security-box{
+    display:none;
+}
+.settingsLogo{
+    display:none;
+}
+.logo-container{
+    grid-area:logo-container;
+    display:flex;
+    h1{
+        color:#fff;
+        font-size:2em;
+        padding-left: -20px;
+        margin-top:-75px;
+    }
+}
+.profile-container{
+    grid-area:profile-area;
+    background-color: #fff;
+    height:100%;
+    width:100%;
+    padding:1.5rem 1.5rem;
+    .profile-inner{
+        border:3px solid #EEF0F9;
+        padding:1.5rem;
+        border-radius: 10px;
+    }
+    .profile-input{
+        display:flex;
+        align-content: space-between;
+        flex-direction: column;
+        .flex{
+            display:flex;
+            justify-content: space-between;
+            gap:130px;
+        }
+        input{
+            width:23em;
+            height:2.4em;
+            background-color: transparent;
+            border:1px solid black;
+            border-radius:17px;
+            padding-bottom:20px;
+            color:#000;
+            padding:15px 12px;
+            font-size:1.2em;
+        }
+        button{
+            border:none;
+            background-color: #1480EC;
+            border-radius:10px;
+            font-size:1.4em;
+            padding:15px 25px;
+            width:12em;
+        }
+        .fname, .lname{
+            text-align: left;
+            margin-left:-26px;
+        }
+    }
+    h1{
+        color:#000;
+        padding-bottom: 10px;
+    }
+    label{
+        color:#000;
+        font-size: 1em;
+    }
+}
+@media screen and (max-width:425px){
+    .settings{
+        width:100vw;
+    }
+    .settings-container{
+        display:grid;
+        grid-template-rows: 96px auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "nav"
+        "profile-area";
+        .nav-container{
+            grid-area:nav;
+            .links.expanded{
+                display:flex;
+            }
+            .links{
+                display:none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                .link-decor{
+                    text-align: center;
+                    margin-bottom:30px;
+                    .decor{
+                        color:#fff;
+                        text-align: center;
+                        border:none;
+                        background-color: #1480EC;
+                        width:8em;
+                        height:2em;
+                        padding:10px 10px;
+                        border-radius:15px;
+                        margin-bottom:30px;
+                        margin-left:180px;
+                        font-size:25px;
+                    }
+                }
+            }
+        }
+        h1{
+            margin-top:0;
+        }
+        .hamburger{
+            display:block;
+            position:absolute;
+            top:30px;
+            right:10px;
+            background-color: transparent;
+            border:none;
+        }
+        .profile-box{
+            display:flex;
+            padding-top:30px;
+            padding-left:20px;
+            gap:10px;
+            h1{
+                font-size:25px;
+                color:#fff;
+            }
+            .settingsLogo{
+                display:block;
+            }
+        }
+        .logo-container{
+            display:none;
+        }
+        .profile-container{
+            grid-area:profile-area;
+            background-color: #fff;
+            .profile-inner{
+                border:none;
+                padding:0;
+                h1{
+                    font-size:25px;
+                }
+            }
+            .profile-input{
+                display:flex;
+                flex-direction:column;
+                gap:10px;
+                .flex{
+                    flex-direction: column;
+                    align-content: center;
+                    gap:10px;
+                }
+                input{
+                    width:244px;
+                    height:34px;
+                    background-color: transparent;
+                    border:1px solid black;
+                    border-radius:17px;
+                    padding-bottom:40px;
+                    color:#000;
+                    padding:5px 12px;
+                    font-size:1.2em;
+                }
+            }
+        }
+    }
+}

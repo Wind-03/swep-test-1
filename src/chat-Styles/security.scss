@@ -1,0 +1,202 @@
+.Security{
+    background-color:#1480EC;
+    height:100vh;
+}
+.hamburger{
+    display:none;
+}
+.profile-box{
+    display:none;
+}
+.security-box{
+    display:none;
+}
+.settingsLogo{
+    display:none;
+}
+.security-container{
+    display:flex;
+    align-content:center;
+    gap:4em;
+    .security-input{
+        padding-top:3em;
+        padding-left:1.6em;
+        width:100%;
+        background-color: #fff;
+        color:#000;
+        .email-flex{
+            display:flex;
+            justify-content: space-between;
+        }
+        h1{
+            font-size:31px;
+            font-weight:400;
+        }
+        label{
+            font-size:17px;
+            color:#ABB2BF;
+        }
+        #btn{
+            width: 108px;
+            height: 44px;
+            background-color:#D9D9D9;
+            color:#000;
+            border:none;
+            border-radius:20px;
+            margin-left:10px;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+        }
+        p{
+            padding-top:10px;
+            color:#ABB2BF;
+            padding-bottom:10px;
+        }
+        .pass-flex{
+            display:flex;
+            justify-content: space-between;
+            .change-btn{
+                display:inline-flex;
+                font-weight: 400;
+                color:#000;
+                background-color: #D9D9D9;
+                padding: 15px 54px 14px 54px;
+                width: 254px;
+                height:54px;
+                border:none;
+                border-radius:25px;
+                font-size: 17px;
+            }
+        }
+        .border{
+            border-bottom:2px solid #ABB2BF;
+            width:95%;
+            margin-top:40px;
+            .clear-btn{
+                background-color: #fff;
+                color:#000;
+                border:none;
+                font-size:31px;
+                font-weight:400;
+            }
+            .red-text{
+                color:red;
+            }
+        }
+    }
+}
+@media screen and (max-width:425px){
+    .Security{
+        width:100vw;
+        overflow-x:hidden;
+    }
+    .security-container{
+        display:grid;
+        grid-template-rows: 30px auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "nav"
+        "security-area";
+        .nav-container{
+            grid-area:nav;
+            .links.expanded{
+                display:flex;
+            }
+            .links{
+                display:none;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                .link-decor{
+                    text-align: center;
+                    margin-bottom:30px;
+                    .decor{
+                        color:#fff;
+                        text-align: center;
+                        border:none;
+                        background-color: #1480EC;
+                        width:8em;
+                        height:2em;
+                        padding:10px 10px;
+                        border-radius:15px;
+                        margin-bottom:30px;
+                        margin-left:180px;
+                        font-size:25px;
+                    }
+                }
+            }
+        }
+        .hamburger{
+            display:block;
+            position:absolute;
+            top:30px;
+            right:20px;
+            background-color: transparent;
+            border:none;
+        }
+        .logo-container{
+            display:none;
+        }
+        .security-box{
+            display:flex;
+            padding-top:30px;
+            padding-left:20px;
+            gap:10px;
+            h1{
+                font-size:25px;
+                color:#fff;
+            }
+            .settingsLogo{
+                display:block;
+            }
+        }
+        .security-input{
+            grid-area:security-area;
+            background-color: #fff;
+            height:100%;
+            // width:1vw;
+            margin-bottom:160px;
+            .hidden{
+                display:none;
+            }
+            h1{
+                font-size: 25px;
+            }
+            .flex{
+                display:flex;
+                justify-content: flex-end;
+                label{
+                    display: inline;
+                }
+                button{
+                    display:inline;
+                }
+            }
+            p{
+                font-size:10px;
+                display:block;
+            }
+            #btn{
+                width: 63px;
+                height: 31px;
+                font-size:10px;
+            }
+            .pass-flex{
+                .change-btn{
+                    width:155px;
+                    height:31px;
+                    padding: 8px 27px 8px 28px;
+                    font-size:12px;
+                }
+            }
+            .border{
+                .clear-btn{
+                    font-size:25px;
+                }
+            }
+        }
+
+    }
+}

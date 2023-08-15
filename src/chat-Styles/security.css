@@ -1,0 +1,200 @@
+.Security {
+  background-color: #1480EC;
+  height: 100vh;
+}
+
+.hamburger {
+  display: none;
+}
+
+.profile-box {
+  display: none;
+}
+
+.security-box {
+  display: none;
+}
+
+.settingsLogo {
+  display: none;
+}
+
+.security-container {
+  display: flex;
+  align-content: center;
+  gap: 4em;
+}
+.security-container .security-input {
+  padding-top: 3em;
+  padding-left: 1.6em;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+}
+.security-container .security-input .email-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.security-container .security-input h1 {
+  font-size: 31px;
+  font-weight: 400;
+}
+.security-container .security-input label {
+  font-size: 17px;
+  color: #ABB2BF;
+}
+.security-container .security-input #btn {
+  width: 108px;
+  height: 44px;
+  background-color: #D9D9D9;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+.security-container .security-input p {
+  padding-top: 10px;
+  color: #ABB2BF;
+  padding-bottom: 10px;
+}
+.security-container .security-input .pass-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.security-container .security-input .pass-flex .change-btn {
+  display: inline-flex;
+  font-weight: 400;
+  color: #000;
+  background-color: #D9D9D9;
+  padding: 15px 54px 14px 54px;
+  width: 254px;
+  height: 54px;
+  border: none;
+  border-radius: 25px;
+  font-size: 17px;
+}
+.security-container .security-input .border {
+  border-bottom: 2px solid #ABB2BF;
+  width: 95%;
+  margin-top: 40px;
+}
+.security-container .security-input .border .clear-btn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  font-size: 31px;
+  font-weight: 400;
+}
+.security-container .security-input .border .red-text {
+  color: red;
+}
+
+@media screen and (max-width: 425px) {
+  .Security {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .security-container {
+    display: grid;
+    grid-template-rows: 30px auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "nav" "security-area";
+  }
+  .security-container .nav-container {
+    grid-area: nav;
+  }
+  .security-container .nav-container .links.expanded {
+    display: flex;
+  }
+  .security-container .nav-container .links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+  .security-container .nav-container .links .link-decor {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .security-container .nav-container .links .link-decor .decor {
+    color: #fff;
+    text-align: center;
+    border: none;
+    background-color: #1480EC;
+    width: 8em;
+    height: 2em;
+    padding: 10px 10px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-left: 180px;
+    font-size: 25px;
+  }
+  .security-container .hamburger {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+  }
+  .security-container .logo-container {
+    display: none;
+  }
+  .security-container .security-box {
+    display: flex;
+    padding-top: 30px;
+    padding-left: 20px;
+    gap: 10px;
+  }
+  .security-container .security-box h1 {
+    font-size: 25px;
+    color: #fff;
+  }
+  .security-container .security-box .settingsLogo {
+    display: block;
+  }
+  .security-container .security-input {
+    grid-area: security-area;
+    background-color: #fff;
+    height: 100%;
+    margin-bottom: 160px;
+  }
+  .security-container .security-input .hidden {
+    display: none;
+  }
+  .security-container .security-input h1 {
+    font-size: 25px;
+  }
+  .security-container .security-input .flex {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .security-container .security-input .flex label {
+    display: inline;
+  }
+  .security-container .security-input .flex button {
+    display: inline;
+  }
+  .security-container .security-input p {
+    font-size: 10px;
+    display: block;
+  }
+  .security-container .security-input #btn {
+    width: 63px;
+    height: 31px;
+    font-size: 10px;
+  }
+  .security-container .security-input .pass-flex .change-btn {
+    width: 155px;
+    height: 31px;
+    padding: 8px 27px 8px 28px;
+    font-size: 12px;
+  }
+  .security-container .security-input .border .clear-btn {
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=security.css.map */
