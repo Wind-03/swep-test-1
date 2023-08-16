@@ -1,9 +1,36 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import logo from '../login-assets/Logo.svg'
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+import axios from '../main';
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    email: '',
+    Number: ''
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async(event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post('/api/register', formData);
+        console.log('We Got That:', response.data);
+    } catch (error) {
+      console.error('Try again:', error);
+    }
+  };
+
+
   return (
     <div className='contact'>
         <div className='contact-container'>

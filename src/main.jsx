@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Signin from './login-pages/SignIn.jsx'
@@ -7,13 +8,21 @@ import Security from './chat-pages/Security.jsx'
 import Info from './login-pages/Info.jsx'
 import Contact from './login-pages/Contact.jsx'
 import Aichat from './chat-pages/AiChat.jsx'
+import Community from "./chat-pages/Community.jsx"
 import "./login-styles/App.css"
 import Settings from "./chat-pages/Settings.jsx"
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import axios from "axios";
 
+export default axios.create({
+    baseURL: "http://localhost:8000/api",
+    headers: {
+        "Content-type": "application/json"
+    }
+});
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "Aichat",
     element: <Aichat />,
+  },
+  {
+    path: "Community",
+    element: <Community />,
   },
   {
     path: "Settings",

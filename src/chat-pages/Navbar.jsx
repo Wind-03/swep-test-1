@@ -40,9 +40,9 @@ function Navbar() {
                 <div className={
                     isNavExpanded ? "links expanded" : "links"
                 }>
-                    <NavLink className='link-decor'><Link className="decor"><img src={Buddy}></img>Buddy</Link></NavLink>
+                    <NavLink className='link-decor'><Link className="decor" to="/Aichat"><img src={Buddy}></img>Buddy</Link></NavLink>
                     <NavLink className='link-decor'><Link className="decor"><img src={Activities}></img>Exercises</Link></NavLink>
-                    <NavLink className='link-decor'><Link className="decor"><img src={Community}></img>Community</Link></NavLink>
+                    <NavLink className='link-decor'><Link className="decor" to="/Community"><img src={Community}></img>Community</Link></NavLink>
                 </div>
                 <div className={
                     isNavExpanded ? "utility expanded" : "utility"

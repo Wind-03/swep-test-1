@@ -78,13 +78,16 @@
 .chat-container .chat-area .send {
   background-color: #1480EC;
   border: none;
-  border-radius: 50%;
-  padding: 16px;
+  border-radius: 55px;
+  padding: 21px;
   position: absolute;
-  bottom: 12px;
+  bottom: 20px;
   right: 15px;
   height: 24px;
   width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .chat-container .chat-area .send-message {
   display: flex;
@@ -139,6 +142,10 @@ nav {
 }
 .utility .link-decor {
   margin-bottom: 1.5em;
+}
+.utility .link-decor .decor {
+  display: flex;
+  align-items: center;
 }
 
 @media screen and (max-width: 425px) {

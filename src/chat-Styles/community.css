@@ -1,0 +1,53 @@
+.community {
+  background-color: #1480EC;
+  height: 100vh;
+}
+
+.community-container {
+  display: grid;
+  grid-template-columns: 1.1fr 2.7fr;
+  grid-template-rows: auto;
+  grid-template-areas: "Navbar community-area";
+}
+.community-container .nav-container {
+  grid-area: Navbar;
+}
+.community-container .community-area {
+  grid-area: community-area;
+  padding-top: 2rem;
+  background-color: #fff;
+  height: 100vh;
+  width: 100%;
+}
+.community-container .community-area .template-message {
+  background-color: #F4F4F4;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 15px;
+  padding: 1em 1em 1em 1em;
+  margin: 10px 20px;
+}
+.community-container .community-area .template-message p {
+  color: #000;
+  width: 90%;
+}
+.community-container .community-area .template-message .like-flex {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+.community-container .community-area .post {
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+}
+.community-container .community-area .post textarea {
+  background-color: transparent;
+  border: none;
+  resize: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 96%;
+  color: #000;
+}/*# sourceMappingURL=community.css.map */

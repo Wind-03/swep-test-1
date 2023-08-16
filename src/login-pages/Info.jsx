@@ -1,10 +1,40 @@
+/* eslint-disable no-unused-vars */
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import logo from '../login-assets/Logo.svg'
 import { Link } from "react-router-dom";
 import "../login-styles/App.css"
+import { useState } from 'react';
+import axios from '../main';
+
 
 function Info() {
+    const [formData, setFormData] = useState({
+        firstName: '',
+        lastName: '',
+        dateOfBirth: '',
+        gender: ''
+    });
+    
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: value
+        }));
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+    
+        try {
+          const response = await axios.post('/api/register', formData);
+          console.log('Registration success:', response.data);
+        } catch (error) {
+          console.error('Registration error:', error);
+        }
+    }; 
+
   return (
     <div className='info'>
         <div className='info-container'>
